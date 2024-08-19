@@ -10,7 +10,7 @@ Item {
         width: parent.width
         height: parent.height
         anchors.centerIn: parent
-        color: "#fffff0"
+        color: "skyblue"
         radius: 20
     Column{
         anchors.centerIn: parent
@@ -27,7 +27,7 @@ Item {
             font.pointSize: Math.min(parent.width, parent.height) * 0.12
             anchors.horizontalCenter: parent.horizontalCenter
             font.bold: true
-            color: "#00ff00"
+            color: "#FFFFFF"
         }
     }
 
