@@ -1,0 +1,16 @@
+{
+    "files": [
+        "FreshProduct.qml",
+        "Logos/PthinkSlogo.png",
+        "main.py",
+        "main.qml",
+        "GrideRectangle.qml",
+        "Products.qml",
+        "GenericImage/Beakry.png",
+        "GenericImage/Beveriges.png",
+        "GenericImage/FreshProduct.png",
+        "GenericImage/Milk.png",
+        "GenericImage/Nuts.png",
+        "GenericImage/panarty.png"
+    ]
+}
