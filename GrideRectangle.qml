@@ -1,5 +1,5 @@
 import QtQuick 2.12
-
+import "CustomCumponent"
 Item {
     width: parent.width*0.29
     height: parent.height*0.5

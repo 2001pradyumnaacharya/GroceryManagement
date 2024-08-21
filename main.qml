@@ -2,7 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Window
 import QtQuick.Controls.Basic
-
+import "CustomCumponent"
 Window {
     width: 640
     height: 480
@@ -10,23 +10,23 @@ Window {
     title: qsTr("Hello World")
 
     StackView{
-        id: st
+        id: stack
         anchors.fill: parent
-        initialItem: lo
+        initialItem: generic
     }
     Rectangle {
-        id: lo
+        id: generic
         width: parent.width
         height: parent.height
 
         ListModel {
             id: model
-            ListElement { genericName: "Fresh Produce" ;img:"GenericImage/FreshProduct.png";page:"FreshProduct.qml"}
-            ListElement { genericName: "Dairy Products";img: "GenericImage/Milk.png"; page: "DairyProducts.qml" }
-            ListElement { genericName: "Bakery Items" ; img: "GenericImage/Beakry.png"; page: "BakeryItems.qml" }
-            ListElement { genericName: "Pantry Staples"; img: "GenericImage/panarty.png"; page: "PantryStaples.qml" }
-            ListElement { genericName: "Beverages" ; img: "GenericImage/Beveriges.png"; page: "Beverages.qml" }
-             ListElement { genericName: "Nuts Dry Fruits"; img: "GenericImage/Nuts.png"; page: "NutsDryFruits.qml" }
+            ListElement { genericName: "Fresh Produce" ;img:"..//GenericImage/FreshProduct.png";page:"FreshProduct.qml"}
+            ListElement { genericName: "Dairy Products";img: "..//GenericImage/Milk.png"; page: "DiaryProduct.qml" }
+            ListElement { genericName: "Bakery Items" ; img: "..//GenericImage/Beakry.png"; page: "BeakeryProduct.qml" }
+            ListElement { genericName: "Pantry Staples"; img: "..//GenericImage/panarty.png"; page: "PantryStaples.qml" }
+            ListElement { genericName: "Beverages" ; img: "..//GenericImage/Beveriges.png"; page: "BeveragesProduct.qml" }
+            ListElement { genericName: "Nuts Dry Fruits"; img: "..//GenericImage/Nuts.png"; page: "NutsAndDryFruits.qml" }
         }
 
         GridView {
@@ -46,16 +46,11 @@ Window {
                 MouseArea{
                     anchors.fill: parent
                     onClicked:{
-                        st.push(page)
+                        stack.push(page)
                     }
                 }
             }
         }
     }
-    Component{
-        id: ll
-        Loader{
-            source: "LL.qml"
-        }
-    }
 }
+

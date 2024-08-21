@@ -5,13 +5,12 @@ Item {
     height: parent.height*0.5
     property string imageUrl: ""
     property string tittle: ""
-    property string price: ""
     Rectangle {
         id: griderectangle
         width: parent.width
         height: parent.height
         anchors.centerIn: parent
-        color: "#fffff0"
+        color: "#fff8dc"
         radius: 20
     Column{
         anchors.centerIn: parent
@@ -25,17 +24,10 @@ Item {
         }
         Text {
             text: tittle
-            font.pointSize: Math.min(parent.width, parent.height) * 0.1
-            anchors.horizontalCenter: parent.horizontalCenter
-            font.bold: true
-            color: "#00ff00"
-        }
-        Text {
-            text: tittle
             font.pointSize: Math.min(parent.width, parent.height) * 0.12
             anchors.horizontalCenter: parent.horizontalCenter
             font.bold: true
-            color: "#00ff00"
+            color: "#7cfc00"
         }
     }
 

@@ -44,17 +44,17 @@ Item{
         clip: true
         ListModel {
             id: model
-            ListElement { imgurl:"..//FreshProductsImages//tomato.png";tittl:"Tomato(500gm)";cost:"28 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Coliflower.png";tittl:"Cauliflower(500gm)";cost:"20 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Carrate.png";tittl:"Carrots(500gm)";cost:"15 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Ginger.png";tittl:"Ginger(500gm)";cost:"40 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Cucumber.png";tittl:"Cucumber(500gm)";cost:"30 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Potato.png";tittl:"Potato(500gm)";cost:"25 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Pumpkin.png";tittl:"Pumpkin(500gm)";cost:"20 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Kiwi.png";tittl:"Kiwi(500gm)";cost:"100 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Mango.png";tittl:"Mango(500gm)";cost:"100 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Orange.png";tittl:"Orage(500gm)";cost:"55 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Piniapple.png";tittl:"Pineapple(500gm)";cost:"50 Rs"}
+            ListElement { imgurl:"..//NutsAndDryFruitsImages//Almonds.png";tittl:"Almonds(500gm)";cost:"199 Rs"}
+            ListElement { imgurl:"..//NutsAndDryFruitsImages//Cashews.png";tittl:"Cashews(500gm)";cost:"120 Rs"}
+            ListElement { imgurl:"..//NutsAndDryFruitsImages//Dates.png";tittl:"Dates(500gm)";cost:"130 Rs"}
+            ListElement { imgurl:"..//NutsAndDryFruitsImages//DryBerry.png";tittl:"Dry Berry(500gm)";cost:"80 Rs"}
+            ListElement { imgurl:"..//NutsAndDryFruitsImages//DryedBanana.png";tittl:"Dryed Banana(500gm)";cost:"90 Rs"}
+            ListElement { imgurl:"..//NutsAndDryFruitsImages//DryMango.png";tittl:"Day Mango(500gm)";cost:"60 Rs"}
+            ListElement { imgurl:"..//NutsAndDryFruitsImages//Hazelnuts.png";tittl:"Hazelnuts(500gm)";cost:"50 Rs"}
+            ListElement { imgurl:"..//NutsAndDryFruitsImages//Pecans.png";tittl:"Pecans(500gm)";cost:"40 Rs"}
+            ListElement { imgurl:"..//NutsAndDryFruitsImages//Pistachios.png";tittl:"Pistachios(500gm)";cost:"100 Rs"}
+            ListElement { imgurl:"..//NutsAndDryFruitsImages//Raisins.png";tittl:"Raisins(500gm)";cost:"55 Rs"}
+            ListElement { imgurl:"..//NutsAndDryFruitsImages//Walnuts.png";tittl:"Walnuts(500gm)";cost:"99 Rs"}
         }
 
         GridView {

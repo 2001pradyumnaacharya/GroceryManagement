@@ -44,17 +44,14 @@ Item{
         clip: true
         ListModel {
             id: model
-            ListElement { imgurl:"..//FreshProductsImages//tomato.png";tittl:"Tomato(500gm)";cost:"28 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Coliflower.png";tittl:"Cauliflower(500gm)";cost:"20 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Carrate.png";tittl:"Carrots(500gm)";cost:"15 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Ginger.png";tittl:"Ginger(500gm)";cost:"40 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Cucumber.png";tittl:"Cucumber(500gm)";cost:"30 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Potato.png";tittl:"Potato(500gm)";cost:"25 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Pumpkin.png";tittl:"Pumpkin(500gm)";cost:"20 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Kiwi.png";tittl:"Kiwi(500gm)";cost:"100 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Mango.png";tittl:"Mango(500gm)";cost:"100 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Orange.png";tittl:"Orage(500gm)";cost:"55 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Piniapple.png";tittl:"Pineapple(500gm)";cost:"50 Rs"}
+            ListElement { imgurl:"..//BeakeryIteamImages//Cakes.png";tittl:"Cake(500 gm)";cost:"150 Rs"}
+            ListElement { imgurl:"..//BeakeryIteamImages//Cookies.png";tittl:"Cookies(500 gm)";cost:"120 Rs"}
+            ListElement { imgurl:"..//BeakeryIteamImages//Croissants.png";tittl:"Croissants(500 gm)";cost:"250 Rs"}
+            ListElement { imgurl:"..//BeakeryIteamImages//Donuts.png";tittl:"Donuts(500 gm)";cost:"140 Rs"}
+            ListElement { imgurl:"..//BeakeryIteamImages//Muffins.png";tittl:"Muffins(500 gm)";cost:"250 Rs"}
+            ListElement { imgurl:"..//BeakeryIteamImages//Pastries.png";tittl:"Pastries(500 gm)";cost:"550 Rs"}
+            ListElement { imgurl:"..//BeakeryIteamImages//Pies.png";tittl:"Pies(500 gm)";cost:"45 Rs"}
+            ListElement { imgurl:"..//BeakeryIteamImages//Scones.png";tittl:"Scones(250 gm)";cost:"100 Rs"}
         }
 
         GridView {

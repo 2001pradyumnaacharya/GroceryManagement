@@ -31,6 +31,7 @@ Item{
         }
         MouseArea{
             anchors.fill: parent
+            cursorShape: Qt.PointingHandCursor
             onClicked: {
                 stack.pop()
             }
@@ -44,17 +45,24 @@ Item{
         clip: true
         ListModel {
             id: model
-            ListElement { imgurl:"..//FreshProductsImages//tomato.png";tittl:"Tomato(500gm)";cost:"28 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Coliflower.png";tittl:"Cauliflower(500gm)";cost:"20 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Carrate.png";tittl:"Carrots(500gm)";cost:"15 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Ginger.png";tittl:"Ginger(500gm)";cost:"40 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Cucumber.png";tittl:"Cucumber(500gm)";cost:"30 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Potato.png";tittl:"Potato(500gm)";cost:"25 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Pumpkin.png";tittl:"Pumpkin(500gm)";cost:"20 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Kiwi.png";tittl:"Kiwi(500gm)";cost:"100 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Mango.png";tittl:"Mango(500gm)";cost:"100 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Orange.png";tittl:"Orage(500gm)";cost:"55 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Piniapple.png";tittl:"Pineapple(500gm)";cost:"50 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//BeakingSoda.png";tittl:"Beaking Soda(500gm)";cost:"28 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//BlackPepper.png";tittl:"Black Pepper(500gm)";cost:"40 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//CannadeTomato.png";tittl:"Tomato Pure(500gm)";cost:"60 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//ChatMasala.png";tittl:"Chat Masala(500gm)";cost:"35 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//ChillPowder.png";tittl:"Chill Powder(500gm)";cost:"50 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//HaldiPowder.png";tittl:"Haldi Powder(500gm)";cost:"25 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//Honey.png";tittl:"Honey(500gm)";cost:"100 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//ots.png";tittl:"Otas(500gm)";cost:"135 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//Oil.png";tittl:"Cooking Oil(500lts)";cost:"85 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//pasata.png";tittl:"Pasata(500gm)";cost:"65 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//Rajama.png";tittl:"Rajama(500gm)";cost:"95 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//rice.png";tittl:"Rice(500gm)";cost:"120 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//salt.png";tittl:"Salt(500gm)";cost:"23 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//SoyaChunks.png";tittl:"Soya Chunks(500gm)";cost:"140 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//sugar.png";tittl:"Sugar(500gm)";cost:"90 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//TeaPowder.png";tittl:"Tea Powder(500gm)";cost:"25 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//Viniger.png";tittl:"Viniger(500gm)";cost:"45 Rs"}
+            ListElement { imgurl:"..//PenatryStaplesImages//wheatFlour.png";tittl:"Wheat Flour(500gm)";cost:"55 Rs"}
         }
 
         GridView {

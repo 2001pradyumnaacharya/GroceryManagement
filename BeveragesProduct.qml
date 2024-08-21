@@ -44,17 +44,15 @@ Item{
         clip: true
         ListModel {
             id: model
-            ListElement { imgurl:"..//FreshProductsImages//tomato.png";tittl:"Tomato(500gm)";cost:"28 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Coliflower.png";tittl:"Cauliflower(500gm)";cost:"20 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Carrate.png";tittl:"Carrots(500gm)";cost:"15 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Ginger.png";tittl:"Ginger(500gm)";cost:"40 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Cucumber.png";tittl:"Cucumber(500gm)";cost:"30 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Potato.png";tittl:"Potato(500gm)";cost:"25 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Pumpkin.png";tittl:"Pumpkin(500gm)";cost:"20 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Kiwi.png";tittl:"Kiwi(500gm)";cost:"100 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Mango.png";tittl:"Mango(500gm)";cost:"100 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Orange.png";tittl:"Orage(500gm)";cost:"55 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Piniapple.png";tittl:"Pineapple(500gm)";cost:"50 Rs"}
+            ListElement { imgurl:"..//BeveragesImages//cococola.png";tittl:"Cocola(200 ml)";cost:"120 Rs"}
+            ListElement { imgurl:"..//BeveragesImages//coffee.png";tittl:"Coffee(200 ml)";cost:"70 Rs"}
+            ListElement { imgurl:"..//BeveragesImages//EnergyDrinks.png";tittl:"Red Bull(200 ml)";cost:"150 Rs"}
+            ListElement { imgurl:"..//BeveragesImages//HotChocolate.png";tittl:"Hot Chocolate(200 ml)";cost:"80 Rs"}
+            ListElement { imgurl:"..//BeveragesImages//IcedTea.png";tittl:"Ice Tea(200 ml)";cost:"90 Rs"}
+            ListElement { imgurl:"..//BeveragesImages//Juice.png";tittl:"Juice(200 ml)";cost:"75 Rs"}
+            ListElement { imgurl:"..//BeveragesImages//Lemonade (1).png";tittl:"Lemonade(100 ml)";cost:"40 Rs"}
+            ListElement { imgurl:"..//BeveragesImages//Smoothies.png";tittl:"Smoothies(100 ml)";cost:"60 Rs"}
+            ListElement { imgurl:"..//BeveragesImages//Tea.png";tittl:"Tea(100 ml)";cost:"102 Rs"}
         }
 
         GridView {

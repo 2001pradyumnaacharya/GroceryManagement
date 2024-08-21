@@ -44,18 +44,16 @@ Item{
         clip: true
         ListModel {
             id: model
-            ListElement { imgurl:"..//FreshProductsImages//tomato.png";tittl:"Tomato(500gm)";cost:"28 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Coliflower.png";tittl:"Cauliflower(500gm)";cost:"20 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Carrate.png";tittl:"Carrots(500gm)";cost:"15 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Ginger.png";tittl:"Ginger(500gm)";cost:"40 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Cucumber.png";tittl:"Cucumber(500gm)";cost:"30 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Potato.png";tittl:"Potato(500gm)";cost:"25 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Pumpkin.png";tittl:"Pumpkin(500gm)";cost:"20 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Kiwi.png";tittl:"Kiwi(500gm)";cost:"100 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Mango.png";tittl:"Mango(500gm)";cost:"100 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Orange.png";tittl:"Orage(500gm)";cost:"55 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Piniapple.png";tittl:"Pineapple(500gm)";cost:"50 Rs"}
-        }
+            ListElement { imgurl:"..//DiaryProductImages//Butter.png";tittl:"Butter(500 gm)";cost:"208 Rs"}
+            ListElement { imgurl:"..//DiaryProductImages//ButterMilk.png";tittl:"ButterMilk(1 ltr)";cost:"20 Rs"}
+            ListElement { imgurl:"..//DiaryProductImages//Cheese.png";tittl:"Cheese(500 gm)";cost:"250 Rs"}
+            ListElement { imgurl:"..//DiaryProductImages//cream.png";tittl:"cream(500 gm)";cost:"140 Rs"}
+            ListElement { imgurl:"..//DiaryProductImages//Ghee.png";tittl:"Ghee(500 gm)";cost:"350 Rs"}
+            ListElement { imgurl:"..//DiaryProductImages//IceCream.png";tittl:"IceCream(500 gm)";cost:"250 Rs"}
+            ListElement { imgurl:"..//DiaryProductImages//Milk.png";tittl:"Milk(1 ltr)";cost:"45 Rs"}
+            ListElement { imgurl:"..//DiaryProductImages//Paneer.png";tittl:"Paneer(250 gm)";cost:"100 Rs"}
+            ListElement { imgurl:"..//DiaryProductImages//Yougurt.png";tittl:"Yougurt(500 gm)";cost:"40 Rs"}
+            ListElement { imgurl:"..//DiaryProductImages//WheyProtien.png";tittl:"WheyProtien(1 Kg)";cost:"2000 Rs"}        }
 
         GridView {
             id:grid
