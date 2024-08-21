@@ -12,24 +12,34 @@ Item {
         anchors.centerIn: parent
         color: "#fff8dc"
         radius: 20
-    Column{
-        anchors.centerIn: parent
-        spacing: 10
-        Image {
-            id: iimage
-            source: imageUrl
-            width: griderectangle.parent.width * 0.5
-            height: griderectangle.parent.height * 0.5
-            anchors.horizontalCenter: parent.horizontalCenter
-        }
-        Text {
-            text: tittle
-            font.pointSize: Math.min(parent.width, parent.height) * 0.12
-            anchors.horizontalCenter: parent.horizontalCenter
-            font.bold: true
-            color: "#7cfc00"
+        Column{
+            anchors.centerIn: parent
+            spacing: 10
+            Image {
+                id: iimage
+                source: imageUrl
+                width: griderectangle.parent.width * 0.5
+                height: griderectangle.parent.height * 0.5
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+            Text {
+                text: tittle
+                font.pointSize: Math.min(parent.width, parent.height) * 0.12
+                anchors.horizontalCenter: parent.horizontalCenter
+                font.bold: true
+                color: "#7cfc00"
+            }
         }
     }
-
+    MouseArea{
+        anchors.fill: griderectangle
+        hoverEnabled: true
+        cursorShape: Qt.PointingHandCursor
+        onEntered: {
+            griderectangle.color="#fffacd"
+        }
+        onExited: {
+            griderectangle.color="#fff8dc"
+        }
     }
 }

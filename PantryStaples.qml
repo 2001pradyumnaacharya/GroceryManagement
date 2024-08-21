@@ -5,6 +5,7 @@ Item{
     width: parent.width
     height: parent.height
     Rectangle{
+        id: backRect
         width: parent.width*0.1
         height: parent.height*0.1
         z: 5
@@ -16,7 +17,7 @@ Item{
                 anchors.centerIn: parent
                 text: "<<BACK"
                 color: "green"
-                font.pointSize: Math.min(griderectangle.parent.width,griderectangle. parent.height) * 0.07
+                font.pointSize: Math.min(backRect.width,backRect.height) * 0.2
                 MouseArea{
                     anchors.fill: parent
                     hoverEnabled: true
@@ -99,7 +100,7 @@ Item{
                 text: "Add To Cart"
                 anchors.centerIn: parent
                 color: "White"
-                font.pointSize: Math.min(griderectangle.parent.width,griderectangle. parent.height) * 0.07
+                font.pointSize: Math.min(addButton.width,addButton.height) * 0.2
                 font.bold: true
             }
         }
