@@ -24,7 +24,7 @@ Item {
             }
             Text {
                 text: tittle
-                font.pointSize: Math.min(parent.width, parent.height) * 0.12
+                font.pointSize: Math.max(Math.min(parent.width, parent.height) * 0.12, 1)
                 anchors.horizontalCenter: parent.horizontalCenter
                 font.bold: true
                 color: "#7cfc00"

@@ -2,9 +2,10 @@ import QtQuick 2.12
 import QtQuick.Controls 2.15
 import "CustomCumponent"
 Item{
-    width: parent.width
-    height: parent.height
+    width: parent ? parent.width : 200
+    height: parent ? parent.height : 200
     Rectangle{
+        id: backRectangle
         width: parent.width*0.1
         height: parent.height*0.1
         z: 5
@@ -16,7 +17,7 @@ Item{
                 anchors.centerIn: parent
                 text: "<<BACK"
                 color: "green"
-                 font.pointSize: Math.min(backlabel.parent.width,backlabel. parent.height) * 0.2
+                font.pointSize: Math.max(Math.min(backRectangle.width,backRectangle.height) * 0.2, 1)
                 MouseArea{
                     anchors.fill: parent
                     hoverEnabled: true
@@ -88,7 +89,7 @@ Item{
                 text: "Add To Cart"
                 anchors.centerIn: parent
                 color: "White"
-                 font.pointSize: Math.min(addButton.width,addButton.height) * 0.2
+                font.pointSize: Math.max(Math.min(addButton.width,addButton.height) * 0.2, 1)
                 font.bold: true
             }
         }

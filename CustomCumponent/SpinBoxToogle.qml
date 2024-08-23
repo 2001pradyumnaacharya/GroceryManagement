@@ -24,6 +24,7 @@ Item {
                 anchors.centerIn: parent
                 color: "white"
                 font.bold: true
+                font.pointSize: Math.max(Math.min(addButton.width,addButton.height) * 0.5, 1)
             }
             MouseArea{
                 anchors.fill: parent
