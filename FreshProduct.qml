@@ -4,6 +4,7 @@ import "CustomCumponent"
 Item{
     width: parent ? parent.width : 200
     height: parent ? parent.height : 200
+
     Rectangle{
         id:backButton
         width: parent.width*0.1
@@ -46,19 +47,18 @@ Item{
         clip: true
         ListModel {
             id: model
-            ListElement { imgurl:"..//FreshProductsImages//tomato.png";tittl:"Tomato(500gm)";cost:"28 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Coliflower.png";tittl:"Cauliflower(500gm)";cost:"20 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Carrate.png";tittl:"Carrots(500gm)";cost:"15 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Ginger.png";tittl:"Ginger(500gm)";cost:"40 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Cucumber.png";tittl:"Cucumber(500gm)";cost:"30 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Potato.png";tittl:"Potato(500gm)";cost:"25 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Pumpkin.png";tittl:"Pumpkin(500gm)";cost:"20 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Kiwi.png";tittl:"Kiwi(500gm)";cost:"100 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Mango.png";tittl:"Mango(500gm)";cost:"100 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Orange.png";tittl:"Orage(500gm)";cost:"55 Rs"}
-            ListElement { imgurl:"..//FreshProductsImages//Piniapple.png";tittl:"Pineapple(500gm)";cost:"50 Rs"}
+            ListElement { imgurl:"..//FreshProductsImages//tomato.png";tittl:"Tomato(500gm)";cost:28}
+            ListElement { imgurl:"..//FreshProductsImages//Coliflower.png";tittl:"Cauliflower(500gm)";cost:20}
+            ListElement { imgurl:"..//FreshProductsImages//Carrate.png";tittl:"Carrots(500gm)";cost:15}
+            ListElement { imgurl:"..//FreshProductsImages//Ginger.png";tittl:"Ginger(500gm)";cost:40}
+            ListElement { imgurl:"..//FreshProductsImages//Cucumber.png";tittl:"Cucumber(500gm)";cost:30}
+            ListElement { imgurl:"..//FreshProductsImages//Potato.png";tittl:"Potato(500gm)";cost:25}
+            ListElement { imgurl:"..//FreshProductsImages//Pumpkin.png";tittl:"Pumpkin(500gm)";cost:20}
+            ListElement { imgurl:"..//FreshProductsImages//Kiwi.png";tittl:"Kiwi(500gm)";cost:100}
+            ListElement { imgurl:"..//FreshProductsImages//Mango.png";tittl:"Mango(500gm)";cost:100}
+            ListElement { imgurl:"..//FreshProductsImages//Orange.png";tittl:"Orage(500gm)";cost:55}
+            ListElement { imgurl:"..//FreshProductsImages//Piniapple.png";tittl:"Pineapple(500gm)";cost:50}
         }
-
         GridView {
             id:grid
             anchors.fill: parent
@@ -68,12 +68,12 @@ Item{
             cellHeight:grid.height*0.35+10
             model: model
             delegate: Products {
+                id: _product
                 width:grid.width*0.29
                 height:grid.height*0.35
                 imageUrl:imgurl
                 tittleWtQuentity:tittl
                 price:cost
-
             }
         }
     }
@@ -107,6 +107,19 @@ Item{
             onExited: {
                 addButton.color="#193c2f"
             }
+            onClicked: {
+                for (var i = 0; i < grid.count; i++) {
+                    var item = grid.itemAtIndex(i);
+                    if (item.quentitey > 0) {
+                        console.log("quentitey: ", item.quentitey,
+                                    "imageUrl: ", item.imageUrl,
+                                    "tittleWtQuentity: ", item.tittleWtQuentity,
+                                    "Totalprice: ",  item.quentitey * item.price,
+                                    "Price: ", item.price);
+                    }
+                }
+            }
+
         }
     }
 }

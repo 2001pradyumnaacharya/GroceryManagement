@@ -84,6 +84,7 @@
         "PenatryStaplesImages/sugar.png",
         "PenatryStaplesImages/TeaPowder.png",
         "PenatryStaplesImages/Viniger.png",
-        "PenatryStaplesImages/wheatFlour.png"
+        "PenatryStaplesImages/wheatFlour.png",
+        "cart.py"
     ]
 }

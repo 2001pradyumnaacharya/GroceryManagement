@@ -18,7 +18,6 @@ Window {
         id: generic
         width: parent.width
         height: parent.height
-
         ListModel {
             id: model
             ListElement { genericName: "Fresh Produce" ;img:"..//GenericImage/FreshProduct.png";page:"FreshProduct.qml"}
