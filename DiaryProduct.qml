@@ -46,16 +46,7 @@ Item{
         clip: true
         ListModel {
             id: model
-            ListElement { imgurl:"..//DiaryProductImages//Butter.png";tittl:"Butter(500 gm)";cost:"208 Rs"}
-            ListElement { imgurl:"..//DiaryProductImages//ButterMilk.png";tittl:"ButterMilk(1 ltr)";cost:"20 Rs"}
-            ListElement { imgurl:"..//DiaryProductImages//Cheese.png";tittl:"Cheese(500 gm)";cost:"250 Rs"}
-            ListElement { imgurl:"..//DiaryProductImages//cream.png";tittl:"cream(500 gm)";cost:"140 Rs"}
-            ListElement { imgurl:"..//DiaryProductImages//Ghee.png";tittl:"Ghee(500 gm)";cost:"350 Rs"}
-            ListElement { imgurl:"..//DiaryProductImages//IceCream.png";tittl:"IceCream(500 gm)";cost:"250 Rs"}
-            ListElement { imgurl:"..//DiaryProductImages//Milk.png";tittl:"Milk(1 ltr)";cost:"45 Rs"}
-            ListElement { imgurl:"..//DiaryProductImages//Paneer.png";tittl:"Paneer(250 gm)";cost:"100 Rs"}
-            ListElement { imgurl:"..//DiaryProductImages//Yougurt.png";tittl:"Yougurt(500 gm)";cost:"40 Rs"}
-            ListElement { imgurl:"..//DiaryProductImages//WheyProtien.png";tittl:"WheyProtien(1 Kg)";cost:"2000 Rs"}        }
+        }
 
         GridView {
             id:grid
@@ -73,6 +64,16 @@ Item{
                 price:cost
 
             }
+        }
+        Component.onCompleted: {
+            var jsonData = middle.loadDairyProduct();
+                var products = JSON.parse(jsonData);
+                model.clear();
+                for (var i = 0; i < products.length; i++) {
+                    var product = products[i];
+                    product.cost = +product.cost;
+                    model.append(product);
+                }
         }
     }
     Rectangle{
@@ -104,6 +105,18 @@ Item{
             }
             onExited: {
                 addButton.color="#193c2f"
+            }
+            onClicked: {
+                for (var i = 0; i < grid.count; i++) {
+                    var item = grid.itemAtIndex(i);
+                    if (item.quentitey > 0) {
+                        console.log("quentitey: ", item.quentitey,
+                                    "imageUrl: ", item.imageUrl,
+                                    "tittleWtQuentity: ", item.tittleWtQuentity,
+                                    "Totalprice: ",  item.quentitey * item.price,
+                                    "Price: ", item.price);
+                    }
+                }
             }
         }
     }

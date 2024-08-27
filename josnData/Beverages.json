@@ -1,0 +1,11 @@
+[
+    { "imgurl":"..//BeveragesImages//cococola.png","tittl":"Cocola(200 ml)","cost":120},
+    { "imgurl":"..//BeveragesImages//coffee.png","tittl":"Coffee(200 ml)","cost":70},
+    { "imgurl":"..//BeveragesImages//EnergyDrinks.png","tittl":"Red Bull(200 ml)","cost":150},
+    { "imgurl":"..//BeveragesImages//HotChocolate.png","tittl":"Hot Chocolate(200 ml)","cost":80},
+    { "imgurl":"..//BeveragesImages//IcedTea.png","tittl":"Ice Tea(200 ml)","cost":90},
+    { "imgurl":"..//BeveragesImages//Juice.png","tittl":"Juice(200 ml)","cost":75},
+    { "imgurl":"..//BeveragesImages//Lemonade (1).png","tittl":"Lemonade(100 ml)","cost":40},
+    { "imgurl":"..//BeveragesImages//Smoothies.png","tittl":"Smoothies(100 ml)","cost":60},
+    { "imgurl":"..//BeveragesImages//Tea.png","tittl":"Tea(100 ml)","cost":102}
+]

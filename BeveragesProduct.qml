@@ -46,15 +46,6 @@ Item{
         clip: true
         ListModel {
             id: model
-            ListElement { imgurl:"..//BeveragesImages//cococola.png";tittl:"Cocola(200 ml)";cost:"120 Rs"}
-            ListElement { imgurl:"..//BeveragesImages//coffee.png";tittl:"Coffee(200 ml)";cost:"70 Rs"}
-            ListElement { imgurl:"..//BeveragesImages//EnergyDrinks.png";tittl:"Red Bull(200 ml)";cost:"150 Rs"}
-            ListElement { imgurl:"..//BeveragesImages//HotChocolate.png";tittl:"Hot Chocolate(200 ml)";cost:"80 Rs"}
-            ListElement { imgurl:"..//BeveragesImages//IcedTea.png";tittl:"Ice Tea(200 ml)";cost:"90 Rs"}
-            ListElement { imgurl:"..//BeveragesImages//Juice.png";tittl:"Juice(200 ml)";cost:"75 Rs"}
-            ListElement { imgurl:"..//BeveragesImages//Lemonade (1).png";tittl:"Lemonade(100 ml)";cost:"40 Rs"}
-            ListElement { imgurl:"..//BeveragesImages//Smoothies.png";tittl:"Smoothies(100 ml)";cost:"60 Rs"}
-            ListElement { imgurl:"..//BeveragesImages//Tea.png";tittl:"Tea(100 ml)";cost:"102 Rs"}
         }
 
         GridView {
@@ -73,6 +64,16 @@ Item{
                 price:cost
 
             }
+        }
+        Component.onCompleted: {
+            var jsonData = middle.loadBeveragesProduct();
+                var products = JSON.parse(jsonData);
+                model.clear();
+                for (var i = 0; i < products.length; i++) {
+                    var product = products[i];
+                    product.cost = +product.cost;
+                    model.append(product);
+                }
         }
     }
     Rectangle{
@@ -105,6 +106,18 @@ Item{
             }
             onExited: {
                 addButton.color="#193c2f"
+            }
+            onClicked: {
+                for (var i = 0; i < grid.count; i++) {
+                    var item = grid.itemAtIndex(i);
+                    if (item.quentitey > 0) {
+                        console.log("quentitey: ", item.quentitey,
+                                    "imageUrl: ", item.imageUrl,
+                                    "tittleWtQuentity: ", item.tittleWtQuentity,
+                                    "Totalprice: ",  item.quentitey * item.price,
+                                    "Price: ", item.price);
+                    }
+                }
             }
         }
     }

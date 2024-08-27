@@ -45,14 +45,6 @@ Item{
         clip: true
         ListModel {
             id: model
-            ListElement { imgurl:"..//BeakeryIteamImages//Cakes.png";tittl:"Cake(500 gm)";cost:"150 Rs"}
-            ListElement { imgurl:"..//BeakeryIteamImages//Cookies.png";tittl:"Cookies(500 gm)";cost:"120 Rs"}
-            ListElement { imgurl:"..//BeakeryIteamImages//Croissants.png";tittl:"Croissants(500 gm)";cost:"250 Rs"}
-            ListElement { imgurl:"..//BeakeryIteamImages//Donuts.png";tittl:"Donuts(500 gm)";cost:"140 Rs"}
-            ListElement { imgurl:"..//BeakeryIteamImages//Muffins.png";tittl:"Muffins(500 gm)";cost:"250 Rs"}
-            ListElement { imgurl:"..//BeakeryIteamImages//Pastries.png";tittl:"Pastries(500 gm)";cost:"550 Rs"}
-            ListElement { imgurl:"..//BeakeryIteamImages//Pies.png";tittl:"Pies(500 gm)";cost:"45 Rs"}
-            ListElement { imgurl:"..//BeakeryIteamImages//Scones.png";tittl:"Scones(250 gm)";cost:"100 Rs"}
         }
 
         GridView {
@@ -71,6 +63,16 @@ Item{
                 price:cost
 
             }
+        }
+        Component.onCompleted: {
+            var jsonData = middle.loadBeakeryProduct();
+                var products = JSON.parse(jsonData);
+                model.clear();
+                for (var i = 0; i < products.length; i++) {
+                    var product = products[i];
+                    product.cost = +product.cost;
+                    model.append(product);
+                }
         }
     }
     Rectangle{
@@ -102,6 +104,18 @@ Item{
             }
             onExited: {
                 addButton.color="#193c2f"
+            }
+            onClicked: {
+                for (var i = 0; i < grid.count; i++) {
+                    var item = grid.itemAtIndex(i);
+                    if (item.quentitey > 0) {
+                        console.log("quentitey: ", item.quentitey,
+                                    "imageUrl: ", item.imageUrl,
+                                    "tittleWtQuentity: ", item.tittleWtQuentity,
+                                    "Totalprice: ",  item.quentitey * item.price,
+                                    "Price: ", item.price);
+                    }
+                }
             }
         }
     }

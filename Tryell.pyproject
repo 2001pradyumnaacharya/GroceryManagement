@@ -85,6 +85,13 @@
         "PenatryStaplesImages/TeaPowder.png",
         "PenatryStaplesImages/Viniger.png",
         "PenatryStaplesImages/wheatFlour.png",
-        "cart.py"
+        "cart.py",
+        "josnData/freshProduct.json",
+        "JsonDataLodaer.py",
+        "josnData/BeakeryProducts.json",
+        "josnData/Beverages.json",
+        "josnData/DairyProduct.json",
+        "josnData/NutsDryFruits.json",
+        "josnData/PantryStaples.json"
     ]
 }

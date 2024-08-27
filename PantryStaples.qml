@@ -46,24 +46,6 @@ Item{
         clip: true
         ListModel {
             id: model
-            ListElement { imgurl:"..//PenatryStaplesImages//BeakingSoda.png";tittl:"Beaking Soda(500gm)";cost:"28 Rs"}
-            ListElement { imgurl:"..//PenatryStaplesImages//BlackPepper.png";tittl:"Black Pepper(500gm)";cost:"40 Rs"}
-            ListElement { imgurl:"..//PenatryStaplesImages//CannadeTomato.png";tittl:"Tomato Pure(500gm)";cost:"60 Rs"}
-            ListElement { imgurl:"..//PenatryStaplesImages//ChatMasala.png";tittl:"Chat Masala(500gm)";cost:"35 Rs"}
-            ListElement { imgurl:"..//PenatryStaplesImages//ChillPowder.png";tittl:"Chill Powder(500gm)";cost:"50 Rs"}
-            ListElement { imgurl:"..//PenatryStaplesImages//HaldiPowder.png";tittl:"Haldi Powder(500gm)";cost:"25 Rs"}
-            ListElement { imgurl:"..//PenatryStaplesImages//Honey.png";tittl:"Honey(500gm)";cost:"100 Rs"}
-            ListElement { imgurl:"..//PenatryStaplesImages//ots.png";tittl:"Otas(500gm)";cost:"135 Rs"}
-            ListElement { imgurl:"..//PenatryStaplesImages//Oil.png";tittl:"Cooking Oil(500lts)";cost:"85 Rs"}
-            ListElement { imgurl:"..//PenatryStaplesImages//pasata.png";tittl:"Pasata(500gm)";cost:"65 Rs"}
-            ListElement { imgurl:"..//PenatryStaplesImages//Rajama.png";tittl:"Rajama(500gm)";cost:"95 Rs"}
-            ListElement { imgurl:"..//PenatryStaplesImages//rice.png";tittl:"Rice(500gm)";cost:"120 Rs"}
-            ListElement { imgurl:"..//PenatryStaplesImages//salt.png";tittl:"Salt(500gm)";cost:"23 Rs"}
-            ListElement { imgurl:"..//PenatryStaplesImages//SoyaChunks.png";tittl:"Soya Chunks(500gm)";cost:"140 Rs"}
-            ListElement { imgurl:"..//PenatryStaplesImages//sugar.png";tittl:"Sugar(500gm)";cost:"90 Rs"}
-            ListElement { imgurl:"..//PenatryStaplesImages//TeaPowder.png";tittl:"Tea Powder(500gm)";cost:"25 Rs"}
-            ListElement { imgurl:"..//PenatryStaplesImages//Viniger.png";tittl:"Viniger(500gm)";cost:"45 Rs"}
-            ListElement { imgurl:"..//PenatryStaplesImages//wheatFlour.png";tittl:"Wheat Flour(500gm)";cost:"55 Rs"}
         }
 
         GridView {
@@ -82,6 +64,16 @@ Item{
                 price:cost
 
             }
+        }
+        Component.onCompleted: {
+            var jsonData = middle.loadPanatryStaples();
+                var products = JSON.parse(jsonData);
+                model.clear();
+                for (var i = 0; i < products.length; i++) {
+                    var product = products[i];
+                    product.cost = +product.cost;
+                    model.append(product);
+                }
         }
     }
     Rectangle{
@@ -113,6 +105,18 @@ Item{
             }
             onExited: {
                 addButton.color="#193c2f"
+            }
+            onClicked: {
+                for (var i = 0; i < grid.count; i++) {
+                    var item = grid.itemAtIndex(i);
+                    if (item.quentitey > 0) {
+                        console.log("quentitey: ", item.quentitey,
+                                    "imageUrl: ", item.imageUrl,
+                                    "tittleWtQuentity: ", item.tittleWtQuentity,
+                                    "Totalprice: ",  item.quentitey * item.price,
+                                    "Price: ", item.price);
+                    }
+                }
             }
         }
     }

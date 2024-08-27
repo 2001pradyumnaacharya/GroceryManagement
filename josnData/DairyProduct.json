@@ -1,0 +1,12 @@
+[
+    { "imgurl":"..//DiaryProductImages//Butter.png","tittl":"Butter(500 gm)","cost":208},
+    { "imgurl":"..//DiaryProductImages//ButterMilk.png","tittl":"ButterMilk(1 ltr)","cost":20},
+    { "imgurl":"..//DiaryProductImages//Cheese.png","tittl":"Cheese(500 gm)","cost":250},
+    { "imgurl":"..//DiaryProductImages//cream.png","tittl":"cream(500 gm)","cost":140},
+    { "imgurl":"..//DiaryProductImages//Ghee.png","tittl":"Ghee(500 gm)","cost":350},
+    { "imgurl":"..//DiaryProductImages//IceCream.png","tittl":"IceCream(500 gm)","cost":250},
+    { "imgurl":"..//DiaryProductImages//Milk.png","tittl":"Milk(1 ltr)","cost":45},
+    { "imgurl":"..//DiaryProductImages//Paneer.png","tittl":"Paneer(250 gm)","cost":100},
+    { "imgurl":"..//DiaryProductImages//Yougurt.png","tittl":"Yougurt(500 gm)","cost":40},
+    { "imgurl":"..//DiaryProductImages//WheyProtien.png","tittl":"WheyProtien(1 Kg)","cost":2000}
+]

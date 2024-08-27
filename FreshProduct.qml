@@ -47,17 +47,6 @@ Item{
         clip: true
         ListModel {
             id: model
-            ListElement { imgurl:"..//FreshProductsImages//tomato.png";tittl:"Tomato(500gm)";cost:28}
-            ListElement { imgurl:"..//FreshProductsImages//Coliflower.png";tittl:"Cauliflower(500gm)";cost:20}
-            ListElement { imgurl:"..//FreshProductsImages//Carrate.png";tittl:"Carrots(500gm)";cost:15}
-            ListElement { imgurl:"..//FreshProductsImages//Ginger.png";tittl:"Ginger(500gm)";cost:40}
-            ListElement { imgurl:"..//FreshProductsImages//Cucumber.png";tittl:"Cucumber(500gm)";cost:30}
-            ListElement { imgurl:"..//FreshProductsImages//Potato.png";tittl:"Potato(500gm)";cost:25}
-            ListElement { imgurl:"..//FreshProductsImages//Pumpkin.png";tittl:"Pumpkin(500gm)";cost:20}
-            ListElement { imgurl:"..//FreshProductsImages//Kiwi.png";tittl:"Kiwi(500gm)";cost:100}
-            ListElement { imgurl:"..//FreshProductsImages//Mango.png";tittl:"Mango(500gm)";cost:100}
-            ListElement { imgurl:"..//FreshProductsImages//Orange.png";tittl:"Orage(500gm)";cost:55}
-            ListElement { imgurl:"..//FreshProductsImages//Piniapple.png";tittl:"Pineapple(500gm)";cost:50}
         }
         GridView {
             id:grid
@@ -66,7 +55,7 @@ Item{
             anchors.margins: 10
             cellWidth:grid.width*0.29+10
             cellHeight:grid.height*0.35+10
-            model: model
+            model:model
             delegate: Products {
                 id: _product
                 width:grid.width*0.29
@@ -75,6 +64,16 @@ Item{
                 tittleWtQuentity:tittl
                 price:cost
             }
+        }
+        Component.onCompleted: {
+            var jsonData = middle.loadFreshProductData();
+                var products = JSON.parse(jsonData);
+                model.clear();
+                for (var i = 0; i < products.length; i++) {
+                    var product = products[i];
+                    product.cost = +product.cost;
+                    model.append(product);
+                }
         }
     }
     Rectangle{

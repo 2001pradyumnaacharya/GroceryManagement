@@ -45,17 +45,7 @@ Item{
         clip: true
         ListModel {
             id: model
-            ListElement { imgurl:"..//NutsAndDryFruitsImages//Almonds.png";tittl:"Almonds(500gm)";cost:"199 Rs"}
-            ListElement { imgurl:"..//NutsAndDryFruitsImages//Cashews.png";tittl:"Cashews(500gm)";cost:"120 Rs"}
-            ListElement { imgurl:"..//NutsAndDryFruitsImages//Dates.png";tittl:"Dates(500gm)";cost:"130 Rs"}
-            ListElement { imgurl:"..//NutsAndDryFruitsImages//DryBerry.png";tittl:"Dry Berry(500gm)";cost:"80 Rs"}
-            ListElement { imgurl:"..//NutsAndDryFruitsImages//DryedBanana.png";tittl:"Dryed Banana(500gm)";cost:"90 Rs"}
-            ListElement { imgurl:"..//NutsAndDryFruitsImages//DryMango.png";tittl:"Day Mango(500gm)";cost:"60 Rs"}
-            ListElement { imgurl:"..//NutsAndDryFruitsImages//Hazelnuts.png";tittl:"Hazelnuts(500gm)";cost:"50 Rs"}
-            ListElement { imgurl:"..//NutsAndDryFruitsImages//Pecans.png";tittl:"Pecans(500gm)";cost:"40 Rs"}
-            ListElement { imgurl:"..//NutsAndDryFruitsImages//Pistachios.png";tittl:"Pistachios(500gm)";cost:"100 Rs"}
-            ListElement { imgurl:"..//NutsAndDryFruitsImages//Raisins.png";tittl:"Raisins(500gm)";cost:"55 Rs"}
-            ListElement { imgurl:"..//NutsAndDryFruitsImages//Walnuts.png";tittl:"Walnuts(500gm)";cost:"99 Rs"}
+
         }
 
         GridView {
@@ -74,6 +64,16 @@ Item{
                 price:cost
 
             }
+        }
+        Component.onCompleted: {
+            var jsonData = middle.loadNutsDryFruites();
+                var products = JSON.parse(jsonData);
+                model.clear();
+                for (var i = 0; i < products.length; i++) {
+                    var product = products[i];
+                    product.cost = +product.cost;
+                    model.append(product);
+                }
         }
     }
     Rectangle{
@@ -105,6 +105,18 @@ Item{
             }
             onExited: {
                 addButton.color="#193c2f"
+            }
+            onClicked: {
+                for (var i = 0; i < grid.count; i++) {
+                    var item = grid.itemAtIndex(i);
+                    if (item.quentitey > 0) {
+                        console.log("quentitey: ", item.quentitey,
+                                    "imageUrl: ", item.imageUrl,
+                                    "tittleWtQuentity: ", item.tittleWtQuentity,
+                                    "Totalprice: ",  item.quentitey * item.price,
+                                    "Price: ", item.price);
+                    }
+                }
             }
         }
     }
