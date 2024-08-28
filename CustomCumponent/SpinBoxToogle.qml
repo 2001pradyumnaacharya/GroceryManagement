@@ -10,7 +10,7 @@ Item {
         width: parent.width
         height: parent.height
         anchors.centerIn: parent
-        color: "#fff8dc"
+        color: "#e5e7e9"
 
         Rectangle {
             id: addButton

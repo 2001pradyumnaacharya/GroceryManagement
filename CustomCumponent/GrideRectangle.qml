@@ -10,7 +10,7 @@ Item {
         width: parent.width
         height: parent.height
         anchors.centerIn: parent
-        color: "#fff8dc"
+        color: "#e5e7e9"
         radius: 20
         Column{
             anchors.centerIn: parent
@@ -27,7 +27,7 @@ Item {
                 font.pointSize: Math.max(Math.min(parent.width, parent.height) * 0.12, 1)
                 anchors.horizontalCenter: parent.horizontalCenter
                 font.bold: true
-                color: "#7cfc00"
+                color: "#d35400"
             }
         }
     }
@@ -36,10 +36,10 @@ Item {
         hoverEnabled: true
         cursorShape: Qt.PointingHandCursor
         onEntered: {
-            griderectangle.color="#fffacd"
+            griderectangle.color="#ccd1d1"
         }
         onExited: {
-            griderectangle.color="#fff8dc"
+            griderectangle.color="#e5e7e9"
         }
     }
 }

@@ -4,8 +4,9 @@ import QtQuick.Window
 import QtQuick.Controls.Basic
 import "CustomCumponent"
 Window {
-    width: 640
-    height: 480
+    id:root
+    width: Screen.width
+    height: Screen.height
     visible: true
     title: qsTr("Hello World")
 
@@ -14,10 +15,9 @@ Window {
         anchors.fill: parent
         initialItem: generic
     }
+
     Rectangle {
         id: generic
-        width: parent.width
-        height: parent.height
         ListModel {
             id: model
             ListElement { genericName: "Fresh Produce" ;img:"..//GenericImage/FreshProduct.png";page:"FreshProduct.qml"}
@@ -28,24 +28,26 @@ Window {
             ListElement { genericName: "Nuts Dry Fruits"; img: "..//GenericImage/Nuts.png"; page: "NutsAndDryFruits.qml" }
         }
 
-        GridView {
+        Grid {
             id:grid
-            anchors.fill: parent
+            spacing: 10
+            columns: 3
             anchors.centerIn: parent
-            anchors.leftMargin: parent.width*0.17
-            anchors.margins: 10
-            cellWidth: Math.min(parent.width*0.29,300)+10
-            cellHeight: Math.min(parent.height*0.25,270)+10
-            model: model
-            delegate: GrideRectangle {
-                width: Math.min(grid.width*0.29,300)
-                height: Math.min(grid.height*0.25,270)
-                tittle: genericName
-                imageUrl:img
-                MouseArea{
-                    anchors.fill: parent
-                    onClicked:{
-                        stack.push(page)
+            Repeater {
+                id: gridRepeater
+                model: model
+
+                delegate: GrideRectangle {
+                    id: gridItem
+                    width: generic.width*0.2
+                    height: gridItem.width
+                    tittle: genericName
+                    imageUrl:img
+                    MouseArea{
+                        anchors.fill: parent
+                        onClicked:{
+                            stack.push(page)
+                        }
                     }
                 }
             }

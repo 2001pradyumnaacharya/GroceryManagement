@@ -14,7 +14,7 @@ Item {
         width: parent.width
         height: parent.height
         anchors.centerIn: parent
-        color: "#fff8dc"
+        color: "#e5e7e9"
         clip: true
         radius: 20
 
@@ -41,7 +41,7 @@ Item {
                 text: tittleWtQuentity
                 font.pointSize: Math.max(Math.min(griderectangle.width, griderectangle.height) * 0.07, 1)
                 font.bold: true
-                color: "#00ff00"
+                color: "#d35400"
             }
 
             Text {
@@ -49,14 +49,14 @@ Item {
                 font.pointSize: Math.max(Math.min(griderectangle.width, griderectangle.height) * 0.06, 1)
                 font.bold: true
                 anchors.horizontalCenter: parent.horizontalCenter
-                color: "#00ff00"
+                color: "#d35400"
             }
 
             Rectangle {
                 width: griderectangle.width * 0.5
                 height: griderectangle.height * 0.2
                 anchors.horizontalCenter: parent.horizontalCenter
-                color: "#fff8dc"
+                color: "#d35400"
 
                 SpinBoxToogle {
                     id: spinBox
