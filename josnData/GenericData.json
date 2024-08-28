@@ -1,4 +1,13 @@
 {
+
+    "genericData":[
+        { "genericName": "Fresh Produce" ,"img":"..//GenericImage/FreshProduct.png","page":"FreshProduct.qml"},
+        { "genericName": "Dairy Products","img": "..//GenericImage/Milk.png","page": "DiaryProduct.qml" },
+        { "genericName": "Bakery Items" , "img": "..//GenericImage/Beakry.png", "page": "BeakeryProduct.qml" },
+        { "genericName": "Pantry Staples", "img": "..//GenericImage/panarty.png", "page": "PantryStaples.qml" },
+        { "genericName": "Beverages" , "img": "..//GenericImage/Beveriges.png", "page": "BeveragesProduct.qml" },
+        { "genericName": "Nuts Dry Fruits", "img": "..//GenericImage/Nuts.png", "page": "NutsAndDryFruits.qml" }
+    ],
     "Fresh Products": [
         {"imgurl": "..//FreshProductsImages//tomato.png", "tittl": "Tomato(500gm)", "cost": 28},
         {"imgurl": "..//FreshProductsImages//Coliflower.png", "tittl": "Cauliflower(500gm)", "cost": 20},

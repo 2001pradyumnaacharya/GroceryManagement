@@ -37,6 +37,14 @@ class Interface(QObject):
         jsonStr=jsonDoc.toJson().data().decode('utf-8')
         return jsonStr
 
+    @Slot(result=str)
+    def jsonGenericLoader(self):
+        data=jsonLoader.jsonGenericLoading()
+        jsonDoc=QJsonDocument.fromVariant(data)
+        jsonStr=jsonDoc.toJson().data().decode('utf-8')
+        return jsonStr
+
+
 if __name__ == "__main__":
     app = QGuiApplication(sys.argv)
     engine = QQmlApplicationEngine()

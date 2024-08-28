@@ -20,12 +20,6 @@ Window {
         id: generic
         ListModel {
             id: model
-            ListElement { genericName: "Fresh Produce" ;img:"..//GenericImage/FreshProduct.png";page:"FreshProduct.qml"}
-            ListElement { genericName: "Dairy Products";img: "..//GenericImage/Milk.png"; page: "DiaryProduct.qml" }
-            ListElement { genericName: "Bakery Items" ; img: "..//GenericImage/Beakry.png"; page: "BeakeryProduct.qml" }
-            ListElement { genericName: "Pantry Staples"; img: "..//GenericImage/panarty.png"; page: "PantryStaples.qml" }
-            ListElement { genericName: "Beverages" ; img: "..//GenericImage/Beveriges.png"; page: "BeveragesProduct.qml" }
-            ListElement { genericName: "Nuts Dry Fruits"; img: "..//GenericImage/Nuts.png"; page: "NutsAndDryFruits.qml" }
         }
 
         Grid {
@@ -51,6 +45,16 @@ Window {
                     }
                 }
             }
+        }
+        Component.onCompleted: {
+            var jsonData = middle. jsonGenericLoader();
+                var products = JSON.parse(jsonData);
+                model.clear();
+                for (var i = 0; i < products.length; i++) {
+                    var product = products[i];
+                    product.cost = +product.cost;
+                    model.append(product);
+                }
         }
     }
 }
