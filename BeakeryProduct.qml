@@ -65,7 +65,7 @@ Item{
             }
         }
         Component.onCompleted: {
-            var jsonData = middle.loadBeakeryProduct();
+            var jsonData = middle.jsonLoader("Bakery Products");
                 var products = JSON.parse(jsonData);
                 model.clear();
                 for (var i = 0; i < products.length; i++) {

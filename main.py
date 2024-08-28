@@ -29,48 +29,13 @@ class Interface(QObject):
         cartraly.clearCart()
         print("cleared")
 
-    @Slot(result=str)
-    def loadFreshProductData(self):
-            data = jsonLoader.getJsonFreshProduct()
-            jsonDoc = QJsonDocument.fromVariant(data)
-            jsonStr = jsonDoc.toJson().data().decode('utf-8')
-            return jsonStr
 
-    @Slot(result=str)
-    def loadBeakeryProduct(self):
-            data = jsonLoader.getJsonBeakeryProduct()
-            jsonDoc = QJsonDocument.fromVariant(data)
-            jsonStr = jsonDoc.toJson().data().decode('utf-8')
-            return jsonStr
-
-    @Slot(result=str)
-    def loadBeveragesProduct(self):
-            data = jsonLoader.getJsonBeveragesProduct()
-            jsonDoc = QJsonDocument.fromVariant(data)
-            jsonStr = jsonDoc.toJson().data().decode('utf-8')
-            return jsonStr
-
-    @Slot(result=str)
-    def loadDairyProduct(self):
-            data = jsonLoader.getJsonDairyProduct()
-            jsonDoc = QJsonDocument.fromVariant(data)
-            jsonStr = jsonDoc.toJson().data().decode('utf-8')
-            return jsonStr
-
-    @Slot(result=str)
-    def loadPanatryStaples(self):
-        data=jsonLoader.getJsonPantryStaplesProduct()
+    @Slot(str,result=str)
+    def jsonLoader(self,GenericName):
+        data=jsonLoader.jsonLoading(GenericName)
         jsonDoc=QJsonDocument.fromVariant(data)
         jsonStr=jsonDoc.toJson().data().decode('utf-8')
         return jsonStr
-
-    @Slot(result=str)
-    def loadNutsDryFruites(self):
-        data=jsonLoader.getJsonNutsDryFruitsProduct()
-        jsonDoc=QJsonDocument.fromVariant(data)
-        jsonStr=jsonDoc.toJson().data().decode('utf-8')
-        return jsonStr
-
 
 if __name__ == "__main__":
     app = QGuiApplication(sys.argv)
