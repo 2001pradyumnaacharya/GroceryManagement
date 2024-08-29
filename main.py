@@ -5,7 +5,7 @@ from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
 import cart as cartraly
 import JsonDataLodaer as jsonLoader
-import CartAppend as cart
+import CartJsonOper as cart
 
 class Interface(QObject):
     signal = Signal()
@@ -57,6 +57,10 @@ class Interface(QObject):
            return True
        else:
            return False
+
+    @Slot()
+    def emptyJsonFile(self):
+        cart.emptyJson()
 
 if __name__ == "__main__":
     app = QGuiApplication(sys.argv)

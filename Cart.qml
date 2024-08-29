@@ -106,7 +106,10 @@ Item {
                     backtoShopping.color="#dc7633"
                     backtoShopping.font.underline=false
                 }
-                onClicked: stack.pop()
+                onClicked:{
+                    middle.emptyJsonFile()
+                    stack.pop()
+                }
                 }
             }
         }

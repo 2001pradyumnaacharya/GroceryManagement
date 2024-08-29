@@ -10,3 +10,9 @@ def cart(imgurl,tittle,totalPrice):
        return True
     except:
         return False
+
+
+def emptyJson():
+    file = open('josnData//Cart.json','w')
+    new_Data=[]
+    js.dump(new_Data,file)

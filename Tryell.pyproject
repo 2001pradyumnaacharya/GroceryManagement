@@ -87,7 +87,7 @@
         "cart.py",
         "josnData/GenericData.json",
         "JsonDataLodaer.py",
-        "CartAppend.py",
+        "CartJsonOper.py",
         "josnData/cart.json",
         "Cart.qml",
         "CustomCumponent/CartGride.qml",
