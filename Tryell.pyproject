@@ -1,6 +1,5 @@
 {
     "files": [
-        "Logos/PthinkSlogo.png",
         "main.py",
         "main.qml",
         "GenericImage/Beakry.png",
@@ -87,6 +86,17 @@
         "PenatryStaplesImages/wheatFlour.png",
         "cart.py",
         "josnData/GenericData.json",
-        "JsonDataLodaer.py"
+        "JsonDataLodaer.py",
+        "CartAppend.py",
+        "josnData/cart.json",
+        "Cart.qml",
+        "CustomCumponent/CartGride.qml",
+        "Logo/cartlogo.png",
+        "CustomCumponent/CartButton.qml",
+        "Logo/deleteLogo.png",
+        "Logo/EmptyCartLogo.png",
+        "CustomCumponent/Popupmasseage.qml",
+        "Logo/fullCart.png",
+        "Logo/errormessage.png"
     ]
 }

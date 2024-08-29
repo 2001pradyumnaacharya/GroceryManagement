@@ -38,6 +38,9 @@ Item{
             }
         }
     }
+    CartButton{
+        z: 5
+    }
     Rectangle {
         id: freshProductGride
         width: parent.width * 0.9
@@ -110,14 +113,23 @@ Item{
                 for (var i = 0; i < grid.count; i++) {
                     var item = grid.itemAtIndex(i);
                     if (item.quentitey > 0) {
-                        console.log("quentitey: ", item.quentitey,
-                                    "imageUrl: ", item.imageUrl,
-                                    "tittleWtQuentity: ", item.tittleWtQuentity,
-                                    "Totalprice: ",  item.quentitey * item.price,
-                                    "Price: ", item.price);
+                        if(middle.cartappend(item.imageUrl,item.tittleWtQuentity,item.quentitey * item.price)){
+                            addedToCart.imageUrl="..//Logo//fullCart.png"
+                            addedToCart.message="Added to cart"
+                            addedToCart.popcolor="#d1f2eb"
+                            addedToCart.visible=true
+                        }else{
+                            addedToCart.imageUrl="..//Logo//errormessage.png"
+                            addedToCart.message="Server issue"
+                            addedToCart.popcolor="red"
+                            addedToCart.visible=true
+                        }
                     }
                 }
             }
         }
+    }
+    Popupmasseage{
+    id: addedToCart
     }
 }

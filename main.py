@@ -5,7 +5,7 @@ from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
 import cart as cartraly
 import JsonDataLodaer as jsonLoader
-import json as js
+import CartAppend as cart
 
 class Interface(QObject):
     signal = Signal()
@@ -34,16 +34,29 @@ class Interface(QObject):
     def jsonLoader(self,GenericName):
         data=jsonLoader.jsonLoading(GenericName)
         jsonDoc=QJsonDocument.fromVariant(data)
-        jsonStr=jsonDoc.toJson().data().decode('utf-8')
-        return jsonStr
+        jsonProductStr=jsonDoc.toJson().data().decode('utf-8')
+        return jsonProductStr
+
+    @Slot(result=str)
+    def jsonCartLoader(self):
+        data=jsonLoader.jsoncartLoading()
+        jsonDoc=QJsonDocument.fromVariant(data)
+        jsonCartStr=jsonDoc.toJson().data().decode('utf-8')
+        return jsonCartStr
 
     @Slot(result=str)
     def jsonGenericLoader(self):
         data=jsonLoader.jsonGenericLoading()
         jsonDoc=QJsonDocument.fromVariant(data)
-        jsonStr=jsonDoc.toJson().data().decode('utf-8')
-        return jsonStr
+        jsonGenericStr=jsonDoc.toJson().data().decode('utf-8')
+        return jsonGenericStr
 
+    @Slot(str,str,str,result=bool)
+    def cartappend(self,img,tittle,price):
+       if cart.cart(img,tittle,price):
+           return True
+       else:
+           return False
 
 if __name__ == "__main__":
     app = QGuiApplication(sys.argv)

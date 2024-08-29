@@ -37,3 +37,10 @@ def jsonGenericLoading():
         genericDatas=data["genericData"]
         file.close()
         return genericDatas
+
+def jsoncartLoading():
+    file = open('josnData//cart.json')
+    data=js.load(file)
+    file.close()
+    return data
+
