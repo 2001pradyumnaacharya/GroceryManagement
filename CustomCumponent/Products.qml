@@ -39,14 +39,14 @@ Item {
 
             Text {
                 text: tittleWtQuentity
-                font.pointSize: Math.max(Math.min(griderectangle.width, griderectangle.height) * 0.07, 1)
+                font.pointSize: Math.max(Math.min(products.width, products.height) * 0.07, 1)
                 font.bold: true
                 color: "#d35400"
             }
 
             Text {
                  text: price + " Rs"
-                font.pointSize: Math.max(Math.min(griderectangle.width, griderectangle.height) * 0.06, 1)
+                font.pointSize: Math.max(Math.min(products.width, products.height) * 0.06, 1)
                 font.bold: true
                 anchors.horizontalCenter: parent.horizontalCenter
                 color: "#d35400"

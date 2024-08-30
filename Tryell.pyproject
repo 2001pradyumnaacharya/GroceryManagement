@@ -97,6 +97,14 @@
         "Logo/EmptyCartLogo.png",
         "CustomCumponent/Popupmasseage.qml",
         "Logo/fullCart.png",
-        "Logo/errormessage.png"
+        "Logo/errormessage.png",
+        "PaymentModule.qml",
+        "CustomCumponent/CardPayment.qml",
+        "CustomCumponent/CartButton.qml",
+        "CustomCumponent/Cash.qml",
+        "CustomCumponent/CustomButton.qml",
+        "CustomCumponent/PayRect.qml",
+        "CustomCumponent/QrPay.qml",
+        "CustomCumponent/Textfiled.qml"
     ]
 }

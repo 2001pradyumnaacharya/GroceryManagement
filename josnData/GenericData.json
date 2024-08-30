@@ -10,7 +10,6 @@
     ],
     "Fresh Products": [
         {"imgurl": "..//FreshProductsImages//tomato.png", "tittl": "Tomato(500gm)", "cost": 28},
-        {"imgurl": "..//FreshProductsImages//Coliflower.png", "tittl": "Cauliflower(500gm)", "cost": 20},
         {"imgurl": "..//FreshProductsImages//Carrate.png", "tittl": "Carrots(500gm)", "cost": 15},
         {"imgurl": "..//FreshProductsImages//Ginger.png", "tittl": "Ginger(500gm)", "cost": 40},
         {"imgurl": "..//FreshProductsImages//Cucumber.png", "tittl": "Cucumber(500gm)", "cost": 30},
