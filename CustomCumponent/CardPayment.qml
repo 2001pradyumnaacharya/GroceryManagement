@@ -95,6 +95,10 @@ Item{
                                 popupp.imageUrl="..//Logo//PaymentRecived.png";
                                 popupp.message="Payment Recived";
                                 popupp.popcolor="#d1f2eb";
+                                middle.emptyJsonFile()
+                                while (stack.depth > 1) {
+                                               stack.pop();
+                                           }
                             }
                         }
                     }

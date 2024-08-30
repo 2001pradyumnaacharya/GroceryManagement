@@ -50,6 +50,9 @@ Item {
         onExited: {
             griderectangle.color="#e5e7e9"
         }
+        onClicked: {
+            middle.emptyJsonFile()
+        }
 
     }
 }
